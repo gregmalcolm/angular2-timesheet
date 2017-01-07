@@ -5,6 +5,7 @@ import {IdentityService} from '../auth';
 import TimesheetService from './timesheet.service';
 import {Timesheet} from './Timesheet';
 import {TimeUnit} from '../time-units';
+import {TimeUnitService} from "../time-units/timeunit.service";
 
 @Component({
   selector: 'app-timesheet',
@@ -23,7 +24,8 @@ export class TimesheetComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private identityService: IdentityService,
-              private timesheetService: TimesheetService) {
+              private timesheetService: TimesheetService,
+              private timeUnitService: TimeUnitService) {
   }
 
   ngOnInit() {
@@ -33,20 +35,14 @@ export class TimesheetComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.timesheetId = params['id'];
 
-      let timesheetObservable = this.timesheetService.getTimesheet(this.identityService.user, this.timesheetId);
-
-      timesheetObservable.subscribe((timesheet) => {
-          this.timesheet = timesheet;
-        });
-
-      this.timesheetService.getTimeUnits(this.identityService.user, this.timesheetId)
-        .subscribe((timeUnits) => {
+      this.timesheetService.getTimesheet(this.identityService.user, this.timesheetId).subscribe((timesheet) => {
+        this.timesheet = timesheet;
+        this.timeUnitService.getTimeUnits(this.identityService.user, this.timesheetId).subscribe(timeUnits => {
           this.timeUnits = timeUnits;
-          timesheetObservable.subscribe(() => {
-            this.timesheet.timeUnits = this.timeUnits;
-            this.loaded = true;
-          });
-        });
+          this.timesheet.timeUnits = this.timeUnits;
+          this.loaded = true;
+        })
+      });
     });
   }
 }
