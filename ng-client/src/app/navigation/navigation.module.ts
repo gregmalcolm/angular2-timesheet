@@ -4,7 +4,6 @@ import { MdButtonModule, MdToolbarModule } from '@angular/material';
 
 import { NavigationComponent } from './navigation.component';
 import { RouterModule } from '@angular/router';
-import {LocalStorage} from '../auth'
 
 @NgModule({
   declarations: [
@@ -15,7 +14,7 @@ import {LocalStorage} from '../auth'
     MdButtonModule,
     MdToolbarModule
   ],
-  providers: [LocalStorage],
+  providers: [],
   bootstrap: [NavigationComponent]
 })
 export class NavigationModule { }

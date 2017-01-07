@@ -8,9 +8,7 @@ import {NavigationModule} from './navigation'
 import {ProjectModule} from './project'
 import {EmployeeModule} from './employee'
 import {TimesheetModule} from './timesheet'
-import {LoginModule} from './login'
 import {ExtHttp} from './shared/extHttp.service';
-import {ResponseHandler} from './auth/responseHandler.service';
 import {MdIconRegistry} from '@angular/material';
 import 'hammerjs';
 
@@ -25,10 +23,9 @@ import 'hammerjs';
     NavigationModule,
     ProjectModule,
     EmployeeModule,
-    TimesheetModule,
-    LoginModule
+    TimesheetModule
   ],
-  providers: [ExtHttp, ResponseHandler, MdIconRegistry],
+  providers: [ExtHttp, MdIconRegistry],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
