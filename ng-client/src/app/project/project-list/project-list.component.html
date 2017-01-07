@@ -1,16 +1,7 @@
-<div class="projects">
-  <md-list>
-    <md-list-item>
-      <div class="header">
-        Projects
-        <button md-fab (click)="add()">
-          <md-icon class="md-24">add</md-icon>
-        </button>
-      </div>
-    </md-list-item>
-    <md-list-item *ngFor="let project of projects">
-      <h3 md-line>{{project.name}}</h3>
-      <p md-line class="demo-secondary-text">{{project.description}}</p>
-    </md-list-item>
-  </md-list>
+<div>
+  <h2>Projects</h2>
+  <div *ngFor="let project of projects">
+    <h3 md-line>{{project.name}}</h3>
+    <p>{{project.description}}</p>
+  </div>
 </div>

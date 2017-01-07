@@ -5,15 +5,13 @@ import {CommonModule} from '@angular/common';
 import {MaterialModule} from '@angular/material';
 
 @NgModule({
-  declarations: [
-    ProjectListComponent
-  ],
+  declarations: [ProjectListComponent],
+  exports: [ProjectListComponent],
   imports: [
     CommonModule,
     FormsModule,
     MaterialModule.forRoot()
   ],
-  exports: [],
   providers: [],
   bootstrap: []
 })
