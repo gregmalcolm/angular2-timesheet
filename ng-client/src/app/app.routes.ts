@@ -6,7 +6,6 @@ import {EmployeeListComponent} from './employee';
 import {ProjectListComponent} from './project';
 import {TimesheetComponent, TimesheetListComponent} from './timesheet';
 
-//TODO: should each component define it's own route?
 const appRoutes: Routes = [
   {
     path: 'home',
