@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { ProjectService } from '../project.service';
 import { Project } from '../Project';
 
 @Component({
@@ -12,18 +10,17 @@ export class ProjectListComponent implements OnInit {
 
   projects: Project[];
 
-  constructor(private projectService: ProjectService, private router: Router) {
+  constructor() {
     this.projects = [];
   }
 
   ngOnInit() {
-    this.projectService.getProjects().subscribe((projects) => {
-      this.projects = projects;
-    });
-  }
-
-  add() {
-    this.router.navigateByUrl('/home/projects/new');
+    this.projects = [
+      new Project({name: 'Project 1', description: 'this is project 1'}),
+      new Project({name: 'Project 2', description: 'this is project 2'}),
+      new Project({name: 'Project 3', description: 'this is project 3'}),
+      new Project({name: 'Project 4', description: 'this is project 4'})
+    ]
   }
 
 }

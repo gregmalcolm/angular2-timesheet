@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { routing } from './app.routes';
 
 import { AppComponent } from './app.component';
 import {ProjectModule} from './project'
@@ -15,7 +14,6 @@ import 'hammerjs';
   imports: [
     BrowserModule,
     HttpModule,
-    routing,
     ProjectModule
   ],
   providers: [MdIconRegistry],
