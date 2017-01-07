@@ -4,6 +4,8 @@ import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class ExtHttp {
+  private token = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiJEZXVKR3VWdU5jQW05bkt6IiwidXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AbWl4dGFwZS5jb20iLCJhZG1pbiI6dHJ1ZSwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IlVzZXIifQ.Zm3RCaLwJYWNBPOz8yMzbASQJMtH8oIUXyTIpLyAEbE';
+
   private HEADER_PREFIX: string = 'Bearer ';
   private urlRoot: string;
   constructor(private _http: Http) {
@@ -17,20 +19,12 @@ export class ExtHttp {
 
   }
 
-  private _generateToken(): string {
-    return this.HEADER_PREFIX + this.identityService.user.token;
-  }
-
   private _createAuthHeaders(): Headers {
     let headers = new Headers({
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': ''
+      'Authorization': this.token
     });
-
-    if (this.identityService.user) {
-      headers.set('Authorization', this._generateToken());
-    }
 
     return headers;
   }
@@ -69,15 +63,12 @@ export class ExtHttp {
           (err) => {
             switch (err.status) {
               case 401:
-                this.serverHandler.handle401();
                 observer.complete();
                 break;
               case 403:
-                this.serverHandler.handle403();
                 observer.complete();
                 break;
               case 500:
-                this.serverHandler.handle500();
                 observer.complete();
                 break;
               default:
