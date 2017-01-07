@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-
 import {Employee} from '../Employee';
 import {EmployeeService} from '../employee.service';
 
@@ -15,7 +13,7 @@ export class EmployeeListComponent implements OnInit {
 
   condition: boolean;
 
-  constructor(private employeeService: EmployeeService, private router: Router) {
+  constructor(private employeeService: EmployeeService) {
   }
 
   ngOnInit() {
@@ -23,10 +21,6 @@ export class EmployeeListComponent implements OnInit {
       this.employees = employees;
     });
     this.condition = false;
-  }
-
-  add() {
-    this.router.navigateByUrl('/home/employees/new');
   }
 
 }
