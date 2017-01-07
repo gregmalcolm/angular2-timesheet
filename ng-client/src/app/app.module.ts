@@ -18,7 +18,7 @@ import 'hammerjs';
     routing,
     ProjectModule
   ],
-  providers: [EMdIconRegistry],
+  providers: [MdIconRegistry],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
