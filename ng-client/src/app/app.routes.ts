@@ -13,8 +13,7 @@ const appRoutes: Routes = [
     children: [
       {path: 'projects', component: ProjectListComponent, pathMatch: 'full'},
       {path: 'employees', component: EmployeeListComponent, pathMatch: 'full'},
-      {path: 'timesheets', component: TimesheetListComponent, pathMatch: 'full'},
-      {path: 'timesheets/:id', component: TimesheetComponent}
+      {path: 'timesheets', component: TimesheetListComponent, pathMatch: 'full'}
     ]
   },
   {path: 'login', component: LoginComponent},

@@ -15,8 +15,7 @@ export class TimesheetListComponent implements OnInit {
   format: string;
 
   constructor(private timesheetService: TimesheetService,
-              private identityService: IdentityService,
-              private router: Router) {
+              private identityService: IdentityService) {
     this.timesheets = [];
     this.format = 'MM/dd/yy';
   }
@@ -29,7 +28,8 @@ export class TimesheetListComponent implements OnInit {
   }
 
   openTimesheet(timesheet) {
-    this.router.navigateByUrl(`/home/timesheets/${timesheet._id}`);
+    // Hint: You'll need to wire in the router
+    console.log('route to the timesheet component')
   }
 
 }
