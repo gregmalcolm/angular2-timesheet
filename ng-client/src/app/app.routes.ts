@@ -4,7 +4,7 @@ import {LoginComponent} from './login';
 import {NavigationComponent} from './navigation';
 import {EmployeeListComponent} from './employee';
 import {ProjectListComponent} from './project';
-import {TimesheetComponent, TimesheetListComponent} from './timesheet';
+import {TimesheetListComponent} from './timesheet';
 
 const appRoutes: Routes = [
   {
