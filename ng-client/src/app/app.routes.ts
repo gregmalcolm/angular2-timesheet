@@ -4,7 +4,7 @@ import {LoginComponent} from './login';
 import {NavigationComponent} from './navigation';
 import {EmployeeListComponent, EmployeeNewComponent} from './employee';
 import {ProjectNewComponent, ProjectListComponent} from './project';
-import {TimesheetComponent, TimesheetNewComponent, TimesheetListComponent, TimesheetEntryComponent} from './timesheet';
+import {TimesheetComponent, TimesheetListComponent} from './timesheet';
 
 //TODO: should each component define it's own route?
 const appRoutes: Routes = [
@@ -17,9 +17,7 @@ const appRoutes: Routes = [
       {path: 'employees', component: EmployeeListComponent, pathMatch: 'full'},
       {path: 'employees/new', component: EmployeeNewComponent},
       {path: 'timesheets', component: TimesheetListComponent, pathMatch: 'full'},
-      {path: 'timesheets/new', component: TimesheetNewComponent},
       {path: 'timesheets/:id', component: TimesheetComponent},
-      {path: 'timesheets/:id/entry', component: TimesheetEntryComponent}
     ]
   },
   {path: 'login', component: LoginComponent},
