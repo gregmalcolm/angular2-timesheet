@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
-
 
 import { TimeUnit } from './TimeUnit';
 
@@ -17,6 +15,5 @@ export class TimeUnitsComponent {
   @Input()
   timesheetId: string;
 
-  constructor(private router: Router) {
-  }
+  constructor() { }
 }
