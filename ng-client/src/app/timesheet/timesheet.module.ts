@@ -8,13 +8,11 @@ import {IdentityService} from '../auth'
 import TimesheetService from './timesheet.service'
 import {TimesheetComponent} from './timesheet.component'
 import {TimesheetListComponent} from './timesheet-list';
-import {TimesheetDetailComponent} from './timesheet-detail';
 import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     TimesheetComponent,
-    TimesheetDetailComponent,
     TimesheetListComponent
   ],
   imports: [
