@@ -25,8 +25,4 @@ export class EmployeeListComponent implements OnInit {
     this.condition = false;
   }
 
-  add() {
-    this.router.navigateByUrl('/home/employees/new');
-  }
-
 }
