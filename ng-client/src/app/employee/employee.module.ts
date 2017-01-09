@@ -16,8 +16,7 @@ import {EmployeeService} from './employee.service'
     MaterialModule.forRoot()
   ],
   exports: [],
-  providers: [EmployeeService],
-  bootstrap: []
+  providers: [EmployeeService]
 })
 export class EmployeeModule {
 }
