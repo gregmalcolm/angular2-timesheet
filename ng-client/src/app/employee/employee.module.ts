@@ -17,7 +17,6 @@ import {EmployeeService} from './employee.service'
   ],
   exports: [
   ],
-  providers: [EmployeeService],
-  bootstrap: []
+  providers: [EmployeeService]
 })
 export class EmployeeModule { }
