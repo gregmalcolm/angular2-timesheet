@@ -11,9 +11,7 @@ import {MaterialModule} from '@angular/material';
     CommonModule,
     FormsModule,
     MaterialModule.forRoot()
-  ],
-  providers: [],
-  bootstrap: []
+  ]
 })
 export class ProjectModule {
 }
