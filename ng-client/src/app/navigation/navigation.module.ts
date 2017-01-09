@@ -14,8 +14,7 @@ import {RouterModule} from '@angular/router';
     MdButtonModule,
     MdToolbarModule
   ],
-  providers: [],
-  bootstrap: []
+  providers: []
 })
 export class NavigationModule {
 }
