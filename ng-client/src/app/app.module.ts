@@ -1,18 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { routing } from './app.routes';
-
-import { AppComponent } from './app.component';
-import {NavigationModule} from './navigation'
-import {ProjectModule} from './project'
-import {EmployeeModule} from './employee'
-import {TimesheetModule} from './timesheet'
-import {LoginModule} from './login'
-import {ExtHttp} from './shared/extHttp.service';
-import {ResponseHandler} from './auth/responseHandler.service';
-import {MdIconRegistry} from '@angular/material';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {CommonModule} from "@angular/common";
 import 'hammerjs';
+import {AppComponent} from "./app.component";
+
 
 @NgModule({
   declarations: [
@@ -20,15 +11,10 @@ import 'hammerjs';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    routing,
-    NavigationModule,
-    ProjectModule,
-    EmployeeModule,
-    TimesheetModule,
-    LoginModule
+    CommonModule
   ],
-  providers: [ExtHttp, ResponseHandler, MdIconRegistry],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

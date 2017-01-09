@@ -1,23 +1,27 @@
 import {Component, OnInit} from '@angular/core';
 
-import {LocalStorage, AUTH_TOKEN_NAME} from './auth/localStorage';
-import {LoginService} from './shared/login.service';
-
 @Component({
   selector: 'app-root',
   styleUrls: ['././app.component.scss'],
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  constructor(private storage: LocalStorage, private loginService: LoginService) {}
+  constructor() {}
+
+  message: string;
 
   ngOnInit() {
-    this.storage.initStorage(window.localStorage);
+    this.message = '';
+  }
 
-    const token = this.storage.getItem(AUTH_TOKEN_NAME);
-    if (token) {
-      this.loginService.loadUser(token);
+  updateUsername(event) {
+    console.log(event.target.value)
+    if(event.target.value.length == 0) {
+      this.message = '';
+    } else {
+      this.message = `, ${event.target.value}`
     }
+
   }
 
 }
