@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { MdButtonModule, MdToolbarModule } from '@angular/material';
+import {MdButtonModule, MdToolbarModule} from '@angular/material';
 
-import { NavigationComponent } from './navigation.component';
-import { RouterModule } from '@angular/router';
+import {NavigationComponent} from './navigation.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
     MdToolbarModule
   ],
   providers: [],
-  bootstrap: [NavigationComponent]
+  bootstrap: []
 })
-export class NavigationModule { }
+export class NavigationModule {
+}
