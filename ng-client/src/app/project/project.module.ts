@@ -15,8 +15,7 @@ import {ProjectService} from './project.service'
     MaterialModule.forRoot()
   ],
   exports: [],
-  providers: [ProjectService],
-  bootstrap: []
+  providers: [ProjectService]
 })
 export class ProjectModule {
 }

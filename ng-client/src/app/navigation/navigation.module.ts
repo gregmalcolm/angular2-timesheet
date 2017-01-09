@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { MdButtonModule, MdToolbarModule } from '@angular/material';
+import {MdButtonModule, MdToolbarModule} from '@angular/material';
 
-import { NavigationComponent } from './navigation.component';
-import { RouterModule } from '@angular/router';
+import {NavigationComponent} from './navigation.component';
+import {RouterModule} from '@angular/router';
 import {LocalStorage} from '../auth'
 
 @NgModule({
@@ -15,7 +15,7 @@ import {LocalStorage} from '../auth'
     MdButtonModule,
     MdToolbarModule
   ],
-  providers: [LocalStorage],
-  bootstrap: [NavigationComponent]
+  providers: [LocalStorage]
 })
-export class NavigationModule { }
+export class NavigationModule {
+}

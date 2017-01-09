@@ -19,8 +19,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     MaterialModule.forRoot(),
     RouterModule,
   ],
-  providers: [TimesheetService, IdentityService],
-  bootstrap: []
+  providers: [TimesheetService, IdentityService]
 })
 export class TimesheetModule {
 }
