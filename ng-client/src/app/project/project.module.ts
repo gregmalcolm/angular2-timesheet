@@ -17,7 +17,6 @@ import {ProjectService} from './project.service'
   ],
   exports: [
   ],
-  providers: [ProjectService],
-  bootstrap: []
+  providers: [ProjectService]
 })
 export class ProjectModule { }

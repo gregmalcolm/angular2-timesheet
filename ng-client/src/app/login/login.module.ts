@@ -22,7 +22,6 @@ import {IdentityService} from '../auth';
     MdCardModule,
     FormsModule
   ],
-  providers: [LoginService, IdentityService],
-  bootstrap: [LoginComponent]
+  providers: [LoginService, IdentityService]
 })
 export class LoginModule { }
